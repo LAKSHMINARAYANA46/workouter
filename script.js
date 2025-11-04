@@ -132,8 +132,10 @@ class App {
       if (
         !isNumInputs(distance, duration, cadence) ||
         !positiveInput(distance, duration, cadence)
-      )
+      ){
         alert(`Input Must be +ve Number.`);
+        return;
+      }
       workout = new running(coords, distance, duration, cadence);
     }
     //if the workout is cycling
@@ -142,8 +144,10 @@ class App {
       if (
         !isNumInputs(distance, duration, elevation) ||
         !positiveInput(distance, duration)
-      )
+      ){
         alert(`Input Must be +ve Number.`);
+        return;
+      }
       workout = new cycleing(coords, distance, duration, elevation);
     }
     //adding workout workouts array
